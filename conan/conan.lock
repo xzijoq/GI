@@ -1,0 +1,29 @@
+{
+ "profile_host": "[settings]\narch=x86_64\narch_build=x86_64\nbuild_type=Release\ncompiler=clang\ncompiler.libcxx=libstdc++11\ncompiler.version=10\nos=Linux\nos_build=Linux\n[options]\n[build_requires]\n[env]\n",
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "pref": null,
+    "options": "fmt:fPIC=True\nfmt:header_only=False\nfmt:shared=False\nfmt:with_fmt_alias=False\nspdlog:fPIC=True\nspdlog:header_only=False\nspdlog:no_exceptions=False\nspdlog:shared=False\nspdlog:wchar_filenames=False\nspdlog:wchar_support=False",
+    "requires": [
+     "1"
+    ],
+    "path": "/home/babayaga/1Code/GI/conanfile.txt"
+   },
+   "1": {
+    "pref": "spdlog/1.7.0#0:0763828c72c29a7fd3f9f8888e54e1cb8f20d92d#ef7c7df5ca4801e86ddff5250216cfbd",
+    "options": "fPIC=True\nheader_only=False\nno_exceptions=False\nshared=False\nwchar_filenames=False\nwchar_support=False\nfmt:fPIC=True\nfmt:header_only=False\nfmt:shared=False\nfmt:with_fmt_alias=False",
+    "modified": "built",
+    "requires": [
+     "2"
+    ]
+   },
+   "2": {
+    "pref": "fmt/7.0.1#0:64e0d548df6221cdd04e8d9f0e6ca9cd75dcef29#c074f7315b4253eebdad6187a73f484f",
+    "options": "fPIC=True\nheader_only=False\nshared=False\nwith_fmt_alias=False",
+    "modified": "built"
+   }
+  }
+ },
+ "version": "0.3"
+}
