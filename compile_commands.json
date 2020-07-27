@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/babayaga/1Code/GI/build",
-  "command": "/usr/bin/c++   -I/home/babayaga/.conan/data/spdlog/1.7.0/_/_/package/0763828c72c29a7fd3f9f8888e54e1cb8f20d92d/include -I/home/babayaga/.conan/data/fmt/7.0.1/_/_/package/64e0d548df6221cdd04e8d9f0e6ca9cd75dcef29/include     -g    -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -g -Wall -O0 -std=gnu++2a -o CMakeFiles/main.dir/src/main.cpp.o -c /home/babayaga/1Code/GI/src/main.cpp",
+  "command": "/usr/bin/c++   -I/home/babayaga/.conan/data/spdlog/1.7.0/_/_/package/0763828c72c29a7fd3f9f8888e54e1cb8f20d92d/include -I/home/babayaga/.conan/data/eastl/3.15.00/_/_/package/127e811b109f00861537b4fc5329d7f55057bfed/include -I/home/babayaga/.conan/data/fmt/7.0.1/_/_/package/64e0d548df6221cdd04e8d9f0e6ca9cd75dcef29/include -I/home/babayaga/.conan/data/eabase/2.09.05/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include -I/home/babayaga/.conan/data/eabase/2.09.05/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/Common -I/home/babayaga/.conan/data/eabase/2.09.05/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/Common/EABase -I../includes     -g    -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -g -Wall -O0 -std=gnu++2a -o CMakeFiles/main.dir/src/main.cpp.o -c /home/babayaga/1Code/GI/src/main.cpp",
   "file": "/home/babayaga/1Code/GI/src/main.cpp"
 }
 ]

@@ -7,6 +7,7 @@
     os=Linux
 
 [requires]
+    eastl/3.Y.Z
     spdlog/1.Y.Z
 
 [options]
@@ -23,10 +24,14 @@
     os_build=Linux
 
 [full_requires]
+    eabase/2.09.05:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    eastl/3.15.00:127e811b109f00861537b4fc5329d7f55057bfed
     fmt/7.0.1:64e0d548df6221cdd04e8d9f0e6ca9cd75dcef29
     spdlog/1.7.0:0763828c72c29a7fd3f9f8888e54e1cb8f20d92d
 
 [full_options]
+    eastl:fPIC=True
+    eastl:shared=False
     fmt:fPIC=True
     fmt:header_only=False
     fmt:shared=False

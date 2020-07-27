@@ -2,15 +2,21 @@
 
 echo $1
 #scan_build use to scan
+#clang-tidy on cpp file
+#bear for other compile jason
 
 cmake_b(){
-
-    cmake --build build
+    rm -r ./build/bin/main
+    cmake --build build -j8 #-v 
     cp ./build/compile_commands.json ./compile_commands.json 
     ./build/bin/main
  
 }
-
+if [[ $1 = conan ]]
+then
+    cd conan
+    
+fi
 
 if [[ $1 = gg ]]
 then
@@ -30,7 +36,7 @@ if [[ $1  = f  || $2 = f ]]
 then
     echo "rebuilding"
     rm -r build
-    cmake -S./ -B build -DCMAKE_BUILD_TYPE=Debug -G "Ninja"     
+    cmake -S./ -B build -DCMAKE_BUILD_TYPE=Debug -G "Ninja" #--trace-source="main" 
     cmake_b
 
 fi

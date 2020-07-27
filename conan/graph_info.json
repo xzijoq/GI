@@ -1,6 +1,14 @@
 {
  "options": [
   [
+   "eastl:fPIC",
+   "True"
+  ],
+  [
+   "eastl:shared",
+   "False"
+  ],
+  [
    "fmt:fPIC",
    "True"
   ],

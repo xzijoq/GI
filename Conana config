@@ -1,0 +1,31 @@
+[settings]
+os=Linux
+os_build=Linux
+arch=x86_64
+arch_build=x86_64
+compiler=clang
+compiler.version=10
+compiler.libcxx=libstdc++11
+build_type=Release
+[options]
+[build_requires]
+[env]
+
+
+
+-- this goes in .conan/profiles/  with name clang 
+
+this is confiog to use clang
+
+conan install ../ --profile /home/babayaga/.conan/profiles/clang
+
+this will install with clang profile selected 
+will ask to build using --build=whatever
+
+
+dont forget to link in cmake
+target_link_libraries(main ${CONAN_LIBS})
+
+
+
+

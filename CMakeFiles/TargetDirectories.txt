@@ -1,0 +1,3 @@
+/home/babayaga/1Code/GI/CMakeFiles/rebuild_cache.dir
+/home/babayaga/1Code/GI/CMakeFiles/edit_cache.dir
+/home/babayaga/1Code/GI/CMakeFiles/main.dir
