@@ -9,9 +9,29 @@ cmake_b(){
     rm -r ./build/bin/main
     cmake --build build -j8 #-v 
     cp ./build/compile_commands.json ./compile_commands.json 
+
     ./build/bin/main
+    echo ""
  
 }
+if [[ $1 = scan ]]
+then
+    rm -r ./build/bin/main
+    echo ""
+    echo "--------------building with scan-build-----------"
+    scan-build cmake --build build -j8 #-v 
+    cp ./build/compile_commands.json ./compile_commands.json 
+    echo ""
+    echo "--------------running clang-tidy----------------"
+    clang-tidy src/*.cpp 
+    clang-tidy includes/*.h
+    echo ""
+    echo "--------------ruuning executable----------------"
+    ./build/bin/main
+    echo ""
+
+fi
+
 if [[ $1 = conan ]]
 then
     cd conan
