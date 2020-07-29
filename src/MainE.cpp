@@ -1,15 +1,9 @@
-#include "Declarations.h"
-
-#include "BitsE.h"
-#include "CommonE.h"
-
-
+#include "DebugE.h"
+#include "DeclarationsE.h"
+#include "iostream"
 using std::cout;
 
 int main()
 {
-InitAllPlayers();
-DebugE::PrintPieceArray();
-
-   
+    InitAllPlayers();
 }

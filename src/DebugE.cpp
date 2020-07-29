@@ -1,15 +1,16 @@
-#include "Declarations.h"
+#include "DebugE.h"
 
+#include <iostream>
 using std::cout;
 
 void DebugE::PrintPieceArray()
 {
-    for ( int i = 0; i < MAX_PP; i++ ) {
+    for ( int i = 0; i < G2::MAX_PP; i++ ) {
         Pp[i].DisplayBits( 7 );
         cout << "\n";
     }
 
-    for ( int i = 0; i < MAX_PP; i++ ) {
+    for ( int i = 0; i < G2::MAX_PP; i++ ) {
         cout << "\nPlN: " << Pp[i].GetPnum() << " PieN: " << Pp[i].GetPieNum()
              << " SwiSq: " << Pp[i].GetSwiSq() << " EndSq: " << Pp[i].GetEndSq()
              << " InSq: " << Pp[i].GetInSq() << " Sq: " << Pp[i].GetSq();
@@ -61,7 +62,7 @@ void DebugE::zDebugPieceFunctions()
     DebugE::DisplayBits( test.GetPPnum(), 7 );
     cout << "\n";
 }
-void DebugE::DisplayBits( u32 num, int sp,bool val )
+void DebugE::DisplayBits( u32 num, int sp, bool val )
 {
     for ( auto i = 31; i >= 0; i-- ) {
         if ( val ) {
@@ -70,6 +71,54 @@ void DebugE::DisplayBits( u32 num, int sp,bool val )
             ( num & 1ULL << i ) ? cout << 1 : cout << 0;
         }
         if ( ( i ) % sp == 0 ) { cout << " "; }
-        if ( ( i ) % 4 == 0 && sp==8 ) { cout << " "; }
+        if ( ( i ) % 4 == 0 && sp == 8 ) { cout << " "; }
     }
+}
+
+void DebugE::zDebugMoveFunctions()
+{
+    MoveE test;
+
+    cout << "\n-----------SetTestStart-------\n";
+    test.SetmFrom( 0b1000011 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+
+    test.SetmTo( 0b1000101 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+
+    test.SetmPP( 0b1001 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+
+    test.SetmIsCap( 0b1 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+
+    test.SetmCPl( 0b10 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+
+    test.SetmPBits( 0b1001 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+    test.SetmCPiece( 1 );
+    test.DisplayBits( 7 );
+    cout << "\n";
+    cout << "\n----------GetTestStart -----------\n";
+
+    DebugE::DisplayBits( test.GetmFrom(), 7 );
+    cout << "\n";
+    DebugE::DisplayBits( test.GetmTo(), 7 );
+    cout << "\n";
+    DebugE::DisplayBits( test.GetmPP(), 7 );
+    cout << "\n";
+    DebugE::DisplayBits( test.GetmIsCap(), 7 );
+    cout << "\n";
+
+    DebugE::DisplayBits( test.GetmCPl(), 7 );
+    cout << "\n";
+    DebugE::DisplayBits( test.GetmPBits(), 7 );
+    cout << "\n";
 }

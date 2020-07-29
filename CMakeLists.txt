@@ -16,11 +16,9 @@ add_executable(main)
 
 target_sources(main PUBLIC 
             src/MainE.cpp 
-            src/BitsE.cpp 
-            src/PieceE.cpp
-            src/SquareE.cpp   
             src/DeclarationsE.cpp
             src/DebugE.cpp        
+            src/CoreE.cpp
             )
 target_compile_features(main PRIVATE cxx_std_20)
 target_compile_options(main PRIVATE -g -Wall -O0)

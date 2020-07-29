@@ -1,9 +1,5 @@
 #pragma once
-
-#include <array>
-
-#include "GData.h"
-#include "Core.h"
+#include "CoreE.h"
 
 
 extern std::array<SquareE, G2::LudoBoard.size()>            Sq;

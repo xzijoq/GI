@@ -1,4 +1,4 @@
-#include "Declarations.h"
+#include "DeclarationsE.h"
 
 
 std::array<SquareE, G2::LudoBoard.size()>            Sq;
@@ -20,20 +20,3 @@ void InitAllPlayers()
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Piece Bit test 
-
-
-
-*/
